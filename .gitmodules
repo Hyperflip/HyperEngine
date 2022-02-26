@@ -1,0 +1,3 @@
+[submodule "HyperEngine/vendor/spdlog"]
+	path = HyperEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
