@@ -4,6 +4,9 @@
     <Filter Include="HyperEngine">
       <UniqueIdentifier>{03994973-6F4E-C268-F842-BC3F64F7B86C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HyperEngine\Events">
+      <UniqueIdentifier>{87A39EAF-7387-5F05-DCE7-5958C8EA4987}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\HyperEngine.h" />
@@ -16,9 +19,15 @@
     <ClInclude Include="src\HyperEngine\EntryPoint.h">
       <Filter>HyperEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\HyperEngine\Events\Event.h">
+      <Filter>HyperEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\HyperEngine\Log.h">
       <Filter>HyperEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\HyperEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\HyperEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\HyperEngine\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HyperEngine\Application.cpp">
