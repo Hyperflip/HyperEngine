@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace HyperEngine {
 
 	class HYPERENGINE_API WindowResizeEvent : public Event {

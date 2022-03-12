@@ -1,3 +1,4 @@
+#include "hepch.h"
 #include "Application.h"
 
 #include "HyperEngine/Events/ApplicationEvent.h"

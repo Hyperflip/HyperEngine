@@ -1,9 +1,7 @@
 #pragma once
 
+#include "hepch.h"
 #include "HyperEngine/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace HyperEngine {
 

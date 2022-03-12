@@ -18,6 +18,9 @@ project "HyperEngine"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-interm/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "hepch.h"
+	pchsource "HyperEngine/src/hepch.cpp"
+
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp"

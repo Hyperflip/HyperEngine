@@ -19,15 +19,22 @@
     <ClInclude Include="src\HyperEngine\EntryPoint.h">
       <Filter>HyperEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\HyperEngine\Events\ApplicationEvent.h">
+      <Filter>HyperEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\HyperEngine\Events\Event.h">
+      <Filter>HyperEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HyperEngine\Events\KeyEvent.h">
+      <Filter>HyperEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HyperEngine\Events\MouseEvent.h">
       <Filter>HyperEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\HyperEngine\Log.h">
       <Filter>HyperEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\HyperEngine\Events\KeyEvent.h" />
-    <ClInclude Include="src\HyperEngine\Events\MouseEvent.h" />
-    <ClInclude Include="src\HyperEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\hepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\HyperEngine\Application.cpp">
@@ -36,5 +43,6 @@
     <ClCompile Include="src\HyperEngine\Log.cpp">
       <Filter>HyperEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\hepch.cpp" />
   </ItemGroup>
 </Project>
