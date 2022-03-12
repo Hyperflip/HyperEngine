@@ -2,12 +2,11 @@
 #include "Application.h"
 
 #include "HyperEngine/Events/ApplicationEvent.h"
-#include "HyperEngine/Log.h"
 
 namespace HyperEngine {
 
 	Application::Application() {
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application() {
@@ -15,9 +14,8 @@ namespace HyperEngine {
 	}
 
 	void Application::Run() {
-		WindowResizeEvent e(1280, 720);
-		HE_TRACE(e);
-
-		while (true);
+		while (m_Running) {
+			m_Window->OnUpdate();
+		};
 	}
 }

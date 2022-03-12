@@ -10,6 +10,12 @@ workspace "HyperEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "HyperEngine/vendor/GLFW/include"
+
+include "HyperEngine/vendor/GLFW"
+
 project "HyperEngine"
     location "HyperEngine"
     kind "SharedLib"
@@ -21,6 +27,10 @@ project "HyperEngine"
 	pchheader "hepch.h"
 	pchsource "HyperEngine/src/hepch.cpp"
 
+	staticruntime "off"
+	runtime "Release"
+	buildoptions {"/MD"}
+
     files {
         "%{prj.name}/src/**.h",
         "%{prj.name}/src/**.cpp"
@@ -28,8 +38,14 @@ project "HyperEngine"
 
     includedirs {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
     }
+
+	links {
+		"GLFW",
+		"opengl32.lib"
+	}
 
     filter "system:windows"
         cppdialect "C++17"
@@ -64,6 +80,10 @@ project "Sandbox"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-interm/" .. outputdir .. "/%{prj.name}")
+
+	staticruntime "off"
+	runtime "Release"
+	buildoptions {"/MD"}
 
     files {
         "%{prj.name}/src/**.h",
