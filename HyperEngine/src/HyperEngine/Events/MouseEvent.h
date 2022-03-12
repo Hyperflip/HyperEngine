@@ -5,6 +5,7 @@
 namespace HyperEngine {
 
 	class HYPERENGINE_API MouseMovedEvent : public Event {
+	public:
 		MouseMovedEvent(float x, float y) : m_MouseX(x), m_MouseY(y) {}
 
 		inline float GetX() const { return m_MouseX; }
