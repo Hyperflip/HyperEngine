@@ -1,5 +1,5 @@
 # HyperEngine
-Game Engine as per The Cherno YouTube series within the scope of the Engine Architecture and Design FHTW course
+Game Engine as per The Cherno YouTube series within the scope of the Engine Architecture and Design FHTW course.
 The engine compiles to a DLL.
 
 ## Components
